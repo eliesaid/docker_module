@@ -1,53 +1,28 @@
 version: "3.9"
 services:
-  api:
-    image: datascientest/fastapi:1.0.0
-    container_name: api_container
+  jupyter:
+    image: jupyter/minimal-notebook:ubuntu-18.04
+    container_name: my_jupyter_from_compose
     networks:
-      - my_network
+      - my_network_from_compose
+    volumes:
+      - .:/home/jovyan/work
     ports:
-      - "8000:8000"
-
-  test1:
-    image: my_authentication:latest
-    container_name: my_authentication_test
-    networks:
-      - my_network
-
-    volumes:
-      - ./log.txt:/home/my_folder/api_test.log
+      - target: 8888
+        published: 4444
+        protocol: tcp
+        mode: host
     environment:
-      LOG: 1
-    
-
-  test2:
-    image: my_authorization:latest
-    container_name: my_autorization_test
+      JUPYTER_TOKEN: "bonjour"
+  elasticsearch:
+    image: elasticsearch:7.2.0
+    container_name: my_es_from_compose
     networks:
-      - my_network
-    
-    volumes:
-      - ./log.txt:/home/my_folder/api_test.log
+      - my_network_from_compose
+    ports:
+      - "9200:9200"
+      - "9300:9300"
     environment:
-      LOG: 1
-
-  test3:
-    image: my_content:latest
-    container_name: my_content_test
-    networks:
-      - my_network
-    
-    volumes:
-      - ./log.txt:/home/my_folder/api_test.log
-    environment:
-      LOG: 1
-
+      discovery.type: single-node
 networks:
-  my_network:
-
-  
-
-
-    
-    
-
+  my_network_from_compose:
