@@ -1,0 +1,13 @@
+FROM ubuntu:18.04
+
+RUN apt-get update && apt-get install python3-pip -y && pip3 install requests
+
+ADD script_auth.py /my_auth/script_auth.py
+
+WORKDIR /my_auth/
+
+ENV LOG=1
+
+EXPOSE 8000
+
+CMD python3 script_auth.py

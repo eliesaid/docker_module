@@ -1,0 +1,13 @@
+FROM ubuntu:18.04
+
+RUN apt-get update && apt-get install python3-pip -y && pip3 install requests
+
+ADD script_perm.py /my_perm/script_perm.py
+
+WORKDIR /my_perm/
+
+ENV LOG=1
+
+EXPOSE 8000
+
+CMD python3 script_perm.py

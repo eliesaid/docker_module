@@ -1,0 +1,14 @@
+FROM ubuntu:18.04
+
+RUN apt-get update && apt-get install python3-pip -y && pip3 install requests
+
+ADD script_content.py /my_content/script_content.py
+
+WORKDIR /my_content/
+
+ENV LOG=1
+
+
+EXPOSE 8000
+
+CMD python3 script_content.py

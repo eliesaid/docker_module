@@ -1,0 +1,262 @@
+
+============================
+    Test content
+============================
+
+Requête effectuée à "/v1/sentiment/life is beautiful"
+| usernam="alice"
+| password="wonderland"
+| sentence="life is beautiful"
+
+==>  SUCCÈS
+
+============================
+    Test content
+============================
+
+Requête effectuée à "/v2/sentiment/life is beautiful"
+| usernam="alice"
+| password="wonderland"
+| sentence="life is beautiful"
+
+==>  SUCCÈS
+
+============================
+    Test content
+============================
+
+Requête effectuée à "/v1/sentiment/that sucks"
+| usernam="alice"
+| password="wonderland"
+| sentence="that sucks"
+
+==>  SUCCÈS
+
+============================
+    Test content
+============================
+
+Requête effectuée à "/v2/sentiment/that sucks"
+| usernam="alice"
+| password="wonderland"
+| sentence="that sucks"
+
+==>  SUCCÈS
+
+============================
+    Test content
+============================
+
+Requête effectuée à "/v1/sentiment/life is beautiful"
+| usernam="alice"
+| password="wonderland"
+| sentence="life is beautiful"
+
+==>  SUCCÈS
+
+============================
+    Test content
+============================
+
+Requête effectuée à "/v2/sentiment/life is beautiful"
+| usernam="alice"
+| password="wonderland"
+| sentence="life is beautiful"
+
+==>  SUCCÈS
+
+============================
+    Test content
+============================
+
+Requête effectuée à "/v1/sentiment/that sucks"
+| usernam="alice"
+| password="wonderland"
+| sentence="that sucks"
+
+==>  SUCCÈS
+
+============================
+    Test content
+============================
+
+Requête effectuée à "/v2/sentiment/that sucks"
+| usernam="alice"
+| password="wonderland"
+| sentence="that sucks"
+
+==>  SUCCÈS
+
+============================
+    Test content
+============================
+
+Requête effectuée à "/v1/sentiment/life is beautiful"
+| usernam="alice"
+| password="wonderland"
+| sentence="life is beautiful"
+
+==>  SUCCÈS
+
+============================
+    Test content
+============================
+
+Requête effectuée à "/v2/sentiment/life is beautiful"
+| usernam="alice"
+| password="wonderland"
+| sentence="life is beautiful"
+
+==>  SUCCÈS
+
+============================
+    Test content
+============================
+
+Requête effectuée à "/v1/sentiment/that sucks"
+| usernam="alice"
+| password="wonderland"
+| sentence="that sucks"
+
+==>  SUCCÈS
+
+============================
+    Test content
+============================
+
+Requête effectuée à "/v2/sentiment/that sucks"
+| usernam="alice"
+| password="wonderland"
+| sentence="that sucks"
+
+==>  SUCCÈS
+
+============================
+    Test authorization
+============================
+
+Requête done at "/v1/sentiment"
+| username="alice"
+| password="wonderland"
+
+Résultat attendu = 200
+Résultat réel = 200
+
+==>  SUCCÈS
+
+============================
+    Test authorization
+============================
+
+Requête done at "/v2/sentiment"
+| username="alice"
+| password="wonderland"
+
+Résultat attendu = 200
+Résultat réel = 200
+
+==>  SUCCÈS
+
+============================
+    Test authorization
+============================
+
+Requête done at "/v1/sentiment"
+| username="bob"
+| password="builder"
+
+Résultat attendu = 200
+Résultat réel = 200
+
+==>  SUCCÈS
+
+============================
+    Test authorization
+============================
+
+Requête done at "/v2/sentiment"
+| username="bob"
+| password="builder"
+
+Résultat attendu = 200
+Résultat réel = 403
+
+==>  ÉCHEC
+
+============================
+    Test authentication
+============================
+
+request done at "/permissions"
+| username="alice"
+| password="wonderland"
+
+Résultat attendu = 200
+Résultat réel = 200
+
+==>  SUCCÈS
+
+============================
+    Test authentication
+============================
+
+request done at "/permissions"
+| username="bob"
+| password="builder"
+
+Résultat attendu = 200
+Résultat réel = 200
+
+==>  SUCCÈS
+
+============================
+    Test authentication
+============================
+
+request done at "/permissions"
+| username="clementine"
+| password="mandarine"
+
+Résultat attendu = 200
+Résultat réel = 403
+
+==>  ÉCHEC
+
+============================
+    Test authentication
+============================
+
+request done at "/permissions"
+| username="alice"
+| password="wonderland"
+
+Résultat attendu = 200
+Résultat réel = 200
+
+==>  SUCCÈS
+
+============================
+    Test authentication
+============================
+
+request done at "/permissions"
+| username="bob"
+| password="builder"
+
+Résultat attendu = 200
+Résultat réel = 200
+
+==>  SUCCÈS
+
+============================
+    Test authentication
+============================
+
+request done at "/permissions"
+| username="clementine"
+| password="mandarine"
+
+Résultat attendu = 200
+Résultat réel = 403
+
+==>  ÉCHEC
